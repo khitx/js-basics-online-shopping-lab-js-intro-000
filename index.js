@@ -62,7 +62,7 @@ function removeFromCart(item) {
 		//console.log(obj)
 		if (obj.hasOwnProperty(item)) {
 			//console.log(obj.hasOwnProperty(item))
-			delete cart[i]
+			cart.splice(i,1)
         } 	
     }	
 }
