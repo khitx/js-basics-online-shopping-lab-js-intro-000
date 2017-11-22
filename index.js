@@ -52,29 +52,19 @@ function total() {
 }
 
 function removeFromCart(item) {
-  //var buz = {}
-	//Object.assign(buz, {fog: 'stack'})
-	//Object.assign(buz, {snow : 'pile'})
+  var obj = {}
+	var str = ''
 
-	//for (var name in buz) {
-  //		if (buz.hasOwnProperty(name)) {
-    		//console.log('this is fog (' + name + ') for sure. Value: ' + buz[name]);
-  //			console.log(`this is fog (${name}) for sure. Value: ${buz[name]}`)
-	//	}
-  //		else {
-  //  		console.log(name); // toString or something else
-  //		}
-	//}
-  for (var item in cart) {
-  		if (cart.hasOwnProperty(item)) {
-    		//console.log('this is fog (' + name + ') for sure. Value: ' + buz[name]);
-  			console.log(`this is (${item}) for sure. Value: ${cart[item]}`)
-		}
-  		else {
-    		console.log(item); // toString or something else
-        console.log('That item is not in your cart.')
-      }
-	}
+	for (var i = 0; i < cart.length;i++) {
+		str = cart[i]
+		//console.log(str)
+		Object.assign(obj, str)
+		//console.log(obj)
+		if (obj.hasOwnProperty(item)) {
+			//console.log(obj.hasOwnProperty(item))
+			delete cart[i]
+        } 
+    }
 }
 
 function placeOrder(cardNumber) {
