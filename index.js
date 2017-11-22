@@ -52,7 +52,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  var obj = {}
+	var obj = {}
 	var str = ''
 
 	for (var i = 0; i < cart.length;i++) {
@@ -63,8 +63,8 @@ function removeFromCart(item) {
 		if (obj.hasOwnProperty(item)) {
 			//console.log(obj.hasOwnProperty(item))
 			delete cart[i]
-        } 
-    }
+        } 	
+    }	
 }
 
 function placeOrder(cardNumber) {
