@@ -52,19 +52,22 @@ function total() {
 }
 
 function removeFromCart(item) {
-	var obj = {}
 	var str = ''
 
 	for (var i = 0; i < cart.length;i++) {
+		var obj = {}
 		str = cart[i]
-		//console.log(str)
+		console.log(str)
 		Object.assign(obj, str)
-		//console.log(obj)
+		console.log(obj)
 		if (obj.hasOwnProperty(item)) {
-			//console.log(obj.hasOwnProperty(item))
+			console.log(obj.hasOwnProperty(item))
 			cart.splice(i,1)
-        } 	
-    }	
+      return cart
+    } 	
+  }
+  console.log('That item is not in your cart.')
+  return cart	
 }
 
 function placeOrder(cardNumber) {
